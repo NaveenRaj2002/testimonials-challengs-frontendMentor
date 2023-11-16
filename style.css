@@ -41,7 +41,7 @@ body {
 }
 
 .person-img {
-  width: 5rem;
+  width: 7rem;
   border-radius: 50%;
 }
 
@@ -192,5 +192,9 @@ body {
 
   .card-white > h1 {
     font-weight: 700;
+  }
+
+  .person-img {
+    width: 7rem;
   }
 }
