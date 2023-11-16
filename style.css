@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --violet-bg: hsl(263, 55%, 52%);
+  --grayish-blue-bg: hsl(217, 19%, 35%);
+  --blackish-blue-bg: hsl(219, 29%, 14%);
+  --white-bg: hsl(0, 0%, 100%);
+
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: var(--Light-grayish-blue);
+}
+
+.section-card {
+  padding: 0 3.2rem;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 3.2rem auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+.person-img {
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.card-1 {
+  position: relative;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  right: 15%;
+  width: 14.5rem;
+  z-index: 1;
+}
+
+.card {
+  padding: 3.6rem 4.4rem;
+  border-radius: 1rem;
+}
+
+.card .profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.profile {
+  position: relative;
+  z-index: 2;
+}
+
+.img-border {
+  border: 3px solid rgba(181, 154, 225, 0.3);
+}
+
+.profile-text h3 {
+  color: var(--Light-gray);
+  font-size: 1.4rem;
+  letter-spacing: 0.08rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.profile-text > p {
+  color: rgba(207, 207, 207, 0.6);
+  font-size: 1.2rem;
+  letter-spacing: 0.07rem;
+  font-weight: 600;
+}
+
+.card h1 {
+  font-size: 2.6rem;
+  color: var(--Light-grayish-blue);
+  line-height: 1.3;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 999;
+}
+
+.card > p {
+  font-size: 1.4rem;
+  color: rgba(207, 207, 207, 0.8);
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: 0.12rem;
+}
+
+.card-white .profile-text h3 {
+  color: var(--grayish-blue-bg);
+}
+
+.card-white .profile-text p {
+  color: rgba(72, 85, 106, 0.5);
+}
+
+.card-white h1 {
+  color: rgba(25, 33, 46, 0.7);
+}
+
+.card-white p {
+  color: rgba(72, 85, 106, 0.7);
+  font-weight: 700;
+}
+
+.card-1 {
+  background-color: var(--violet-bg);
+  grid-column: 1/ 3;
+}
+
+.card-2 {
+  background-color: var(--grayish-blue-bg);
+}
+
+.card-3 {
+  background-color: var(--white-bg);
+}
+
+.card-4 {
+  background-color: var(--blackish-blue-bg);
+  grid-column: 2 / 4;
+}
+
+.card-5 {
+  background-color: var(--white-bg);
+  grid-column: 4/ 5;
+  grid-row: 1/ 3;
+}
+
+@media (max-width: 75em) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-1 {
+    grid-column: auto;
+  }
+
+  .card-4 {
+    grid-column: auto;
+  }
+
+  .card-5 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 62rem) {
+  html {
+    font-size: 50%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .bg-img {
+    width: 14rem;
+    right: 8%;
+  }
+
+  .card h1 {
+    font-weight: 500;
+  }
+
+  .card-white > h1 {
+    font-weight: 700;
+  }
+}
